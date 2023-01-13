@@ -1,0 +1,26 @@
+1- npm install -g sass
+2- npm init -y
+3- npm install gulp --save-deps
+4- npm install gulp-sass --save-deps
+5- npm install sass gulp-sass --save-dev
+6- npm install gulp gulp-sass --save-dev
+
+7- touch gulpfile.js
+  Codes: 
+    "use strict";
+    const { src, dest, watch } = require("gulp");
+    const sass = require('gulp-sass')(require('sass'));
+    function compileSass(done) {
+      src("assets/scss/*.scss")
+        .pipe(sass().on("error", sass.logError))
+        .pipe(dest("assets/css"));
+      done();
+    }
+
+    function watchSass() {
+      watch("assets/scss/*.scss", compileSass);
+    }
+
+    exports.watchSass = watchSass;
+
+8- Package.json Comand : "sass": "gulp watchSass"

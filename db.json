@@ -1,0 +1,160 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Nike Pegasus Trail 4",
+      "description": " It's time to get outside. Running is your daily ritual, taking you from road to trail as you seek out new routes and goals. With a supportive, springy feel, these trail runners can take you there and back again. Underfoot traction helps keep you going over rocky terrain while still providing a smooth ride for the road. Your trusted workhorse with wings is back and ready for an off-road adventure.",
+      "size": [39, 40, 41],
+      "colors": ["#00f900", "steelblue", "#ff0000", "#808080"],
+      "quantity": 6,
+      "price": 450,
+      "images": [
+        "assets/images/products/product1.png",
+        "assets/images/products/product2.png",
+        "assets/images/products/product3.png",
+        "assets/images/products/product4.png",
+        "assets/images/products/product5.png",
+        "assets/images/products/product6.png"
+      ],
+      "view": 0,
+      "brand": 1
+    },
+    {
+      "id": 2,
+      "name": "Nike Run Flow",
+      "description": " It's time to get outside. Running is your daily ritual, taking you from road to trail as you seek out new routes and goals. With a supportive, springy feel, these trail runners can take you there and back again. Underfoot traction helps keep you going over rocky terrain while still providing a smooth ride for the road. Your trusted workhorse with wings is back and ready for an off-road adventure.",
+      "size": [39, 40, 41],
+      "colors": ["#00f900", "steelblue", "#ff0000", "#808080"],
+      "quantity": 6,
+      "price": 450,
+      "images": [
+        "assets/images/products/product2.png",
+        "assets/images/products/product1.png",
+        "assets/images/products/product3.png",
+        "assets/images/products/product4.png",
+        "assets/images/products/product5.png",
+        "assets/images/products/product6.png"
+      ],
+      "view": 0,
+      "brand": 2
+    },
+    {
+      "id": 3,
+      "name": "Nike SB Zoom Blazer Mid ISO",
+      "description": " It's time to get outside. Running is your daily ritual, taking you from road to trail as you seek out new routes and goals. With a supportive, springy feel, these trail runners can take you there and back again. Underfoot traction helps keep you going over rocky terrain while still providing a smooth ride for the road. Your trusted workhorse with wings is back and ready for an off-road adventure.",
+      "size": [39, 40, 41],
+      "colors": ["#00f900", "steelblue", "#ff0000", "#808080"],
+      "quantity": 6,
+      "price": 450,
+      "images": [
+        "assets/images/products/product3.png",
+        "assets/images/products/product2.png",
+        "assets/images/products/product1.png",
+        "assets/images/products/product4.png",
+        "assets/images/products/product5.png",
+        "assets/images/products/product6.png"
+      ],
+      "view": 0,
+      "brand": 3
+    },
+    {
+      "id": 4,
+      "name": "Air Jordan 1 Low",
+      "description": " It's time to get outside. Running is your daily ritual, taking you from road to trail as you seek out new routes and goals. With a supportive, springy feel, these trail runners can take you there and back again. Underfoot traction helps keep you going over rocky terrain while still providing a smooth ride for the road. Your trusted workhorse with wings is back and ready for an off-road adventure.",
+      "size": [39, 40, 41],
+      "colors": ["#00f900", "steelblue", "#ff0000", "#808080"],
+      "quantity": 6,
+      "price": 450,
+      "images": [
+        "assets/images/products/product4.png",
+        "assets/images/products/product2.png",
+        "assets/images/products/product3.png",
+        "assets/images/products/product1.png",
+        "assets/images/products/product5.png",
+        "assets/images/products/product6.png"
+      ],
+      "view": 0,
+      "brand": 4
+    },
+    {
+      "id": 5,
+      "name": "Nike Omni Multi-Court",
+      "description": " It's time to get outside. Running is your daily ritual, taking you from road to trail as you seek out new routes and goals. With a supportive, springy feel, these trail runners can take you there and back again. Underfoot traction helps keep you going over rocky terrain while still providing a smooth ride for the road. Your trusted workhorse with wings is back and ready for an off-road adventure.",
+      "size": [39, 40, 41],
+      "colors": ["#00f900", "steelblue", "#ff0000", "#808080"],
+      "quantity": 6,
+      "price": 450,
+      "images": [
+        "assets/images/products/product5.png",
+        "assets/images/products/product2.png",
+        "assets/images/products/product3.png",
+        "assets/images/products/product4.png",
+        "assets/images/products/product1.png",
+        "assets/images/products/product6.png"
+      ],
+      "view": 0,
+      "brand": 5
+    },
+    {
+      "id": 6,
+      "name": "Nike MD Valiant",
+      "description": " It's time to get outside. Running is your daily ritual, taking you from road to trail as you seek out new routes and goals. With a supportive, springy feel, these trail runners can take you there and back again. Underfoot traction helps keep you going over rocky terrain while still providing a smooth ride for the road. Your trusted workhorse with wings is back and ready for an off-road adventure.",
+      "size": [39, 40, 41],
+      "colors": ["#00f900", "steelblue", "#ff0000", "#808080"],
+      "quantity": 6,
+      "price": 450,
+      "images": [
+        "assets/images/products/product6.png",
+        "assets/images/products/product2.png",
+        "assets/images/products/product3.png",
+        "assets/images/products/product4.png",
+        "assets/images/products/product5.png",
+        "assets/images/products/product1.png"
+      ],
+      "view": 0,
+      "brand": 6
+    }
+  ],
+  "brands": [
+    {
+      "id": 1,
+      "name": "Nike",
+      "image": "assets/images/brands/Nike.png"
+    },
+    {
+      "id": 2,
+      "name": "Adidas",
+      "image": "assets/images/brands/Adidas.png"
+    },
+    {
+      "id": 3,
+      "name": "Puma",
+      "image": "assets/images/brands/Puma.png"
+    },
+    {
+      "id": 4,
+      "name": "Asics",
+      "image": "assets/images/brands/Asics.png"
+    },
+    {
+      "id": 5,
+      "name": "Reebok",
+      "image": "assets/images/brands/Reebok.png"
+    },
+    {
+      "id": 6,
+      "name": "NewB",
+      "image": "assets/images/brands/NewB.png"
+    },
+    {
+      "id": 7,
+      "name": "Converse",
+      "image": "assets/images/brands/Converse.png"
+    },
+    {
+      "id": 8,
+      "name": "More...",
+      "image": "assets/images/brands/More.png"
+    }
+  ]
+}

@@ -1,0 +1,156 @@
+@import "./public.scss";
+.productDetails {
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+  &_back {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+  }
+  &_slider {
+    background-color: #f3f3f3;
+    height: 40vh;
+  }
+
+  &_info {
+    padding: 20px;
+    &_name {
+      h1 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 27px;
+        line-height: 39px;
+      }
+    }
+    &_desc {
+      margin-top: 5px;
+      p {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        text-align: justify;
+        display: inline;
+      }
+      strong {
+        font-weight: bolder;
+        font-size: larger;
+      }
+    }
+
+    &_size {
+      &_title {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 24px;
+        align-items: center;
+      }
+      .productSize {
+        padding-top: 10px;
+        .size {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          border: 2px solid #000;
+          font-weight: bolder;
+          color: gray;
+          font-size: larger;
+
+        }
+
+        .selectSize{
+          background-color: #000;
+          color: #fff;
+        }
+      }
+    }
+
+    &_color {
+      &_title {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 24px;
+        align-items: center;
+      }
+      .productColor {
+        padding-top: 10px;
+        .color {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+        }
+        .selectColor{
+          // border: 3px solid #fff;
+          border: 4px solid gold;
+
+        }
+      }
+    }
+
+    &_quantity {
+      margin-top: 30px;
+      margin-bottom: 100px;
+      p {
+        font-size: 20px;
+        font-weight: bolder;
+      }
+      &_quantityBox {
+        padding: 10px 20px;
+        border-radius: 25px;
+        background-color: #efefef;
+      }
+    }
+
+    &_add-to-cart {
+      position: fixed;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      padding: 20px;
+      background-color: #fff;
+
+      #addToCart {
+        padding: 12px 16px;
+        align-items: center;
+        width: 100%;
+        height: 47px;
+        color: #fff;
+        background: #000;
+        border: none;
+        border-radius: 30px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      &_textPrice{
+        p {
+          width: max-content;
+        }
+        p:nth-child(1){
+          font-family: "Inter";
+          font-style: normal;
+          color: gray;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 24px;
+        }
+        p:nth-child(2) {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 900;
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}

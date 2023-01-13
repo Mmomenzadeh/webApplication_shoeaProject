@@ -1,0 +1,26 @@
+.menu-bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #fff;
+  padding: 10px 0px;
+  cursor: pointer;
+  border-top-left-radius:10px ;
+  border-top-right-radius:10px ;
+
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  p {
+    margin-top: 5px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 12px;
+    letter-spacing: -0.04em;
+  }
+}

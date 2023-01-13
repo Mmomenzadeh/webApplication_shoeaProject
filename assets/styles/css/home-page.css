@@ -1,0 +1,314 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.j-c {
+  justify-content: center;
+}
+
+.a-c {
+  align-items: center;
+}
+
+.j-sb {
+  justify-content: space-between;
+}
+
+.j-sa {
+  justify-content: space-around;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+.gap5 {
+  gap: 5px;
+}
+
+.gap10 {
+  gap: 10px;
+}
+
+.gap15 {
+  gap: 15px;
+}
+
+.gap20 {
+  gap: 20px;
+}
+
+.gap25 {
+  gap: 25px;
+}
+
+.gap30 {
+  gap: 30px;
+}
+
+.gap35 {
+  gap: 35px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.menu-bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #fff;
+  padding: 10px 0px;
+  cursor: pointer;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.menu-bottom p {
+  margin-top: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 12px;
+  letter-spacing: -0.04em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  max-height: 400px;
+  text-align: center;
+}
+.mySlides img {
+  height: 100%;
+  width: 90%;
+  object-fit: cover;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.homePage {
+  height: 100vh;
+  overflow-x: hidden;
+  padding: 8px;
+}
+.homePage_header_left .userBox img {
+  width: 50px;
+  height: 50px;
+}
+.homePage_header_left .userBox .greeting {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #808080;
+}
+.homePage_header_left .userBox #userProfileName {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 21px;
+  line-height: 19px;
+}
+.homePage_header_right {
+  cursor: pointer;
+}
+.homePage_header_right #homePage_bell:hover {
+  color: gold;
+}
+.homePage_header_right #homePage_heart:hover {
+  color: red;
+}
+.homePage_search {
+  margin-top: 20px;
+  position: relative;
+}
+.homePage_search_search-icon {
+  position: absolute;
+  top: 50%;
+  transform: translate(5px, -50%);
+  color: #666;
+}
+.homePage_search #searchBox {
+  width: 100%;
+  height: 35px;
+  padding-left: 30px;
+  background-color: rgba(246, 246, 246, 0.9647058824);
+  outline: none;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.homePage .homePage_category_brandBox {
+  margin-top: 25px;
+  cursor: pointer;
+}
+.homePage .homePage_category_brandBox .brand .brand-imgBox {
+  width: 60px;
+  height: 60px;
+  background-color: #e8e8e9;
+  border-radius: 50%;
+}
+.homePage .homePage_category_brandBox .brand p {
+  font-family: "inter";
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 12px;
+}
+.homePage_products {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.homePage_products .homePage_products-list_product .product-img {
+  width: 130px;
+  height: 130px;
+  max-width: 150px;
+  max-height: 150px;
+  background-color: #f3f3f3;
+  border-radius: 15px;
+  padding: 10px;
+}
+.homePage_products .homePage_products-list_product .product-img img {
+  width: 100%;
+  height: 100%;
+}
+.homePage_products .homePage_products-list_product .product-name {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  letter-spacing: -0.04em;
+  padding-left: 5px;
+}
+.homePage_products .homePage_products-list_product .product-price {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  letter-spacing: -0.04em;
+  padding: 0px 5px 10px 0px;
+}

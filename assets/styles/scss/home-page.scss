@@ -1,0 +1,125 @@
+@import "./public.scss";
+
+.homePage {
+  height: 100vh;
+  overflow-x: hidden;
+  padding: 8px;
+  &_header_left {
+    .userBox {
+      img {
+        width: 50px;
+        height: 50px;
+      }
+      .greeting {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #808080;
+      }
+      #userProfileName {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: bolder;
+        font-size: 21px;
+        line-height: 19px;
+      }
+    }
+  }
+
+  &_header_right {
+    cursor: pointer;
+    #homePage_bell {
+      &:hover {
+        color: gold;
+      }
+    }
+    #homePage_heart {
+      &:hover {
+        color: red;
+      }
+    }
+  }
+
+  &_search {
+    margin-top: 20px;
+    position: relative;
+    &_search-icon {
+      position: absolute;
+      top: 50%;
+      transform: translate(5px, -50%);
+      color: #666;
+    }
+    #searchBox {
+      width: 100%;
+      height: 35px;
+      padding-left: 30px;
+      background-color: #f6f6f6f6;
+      outline: none;
+      border: 1px solid lightgray;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+  }
+
+  .homePage_category {
+    &_brandBox {
+      margin-top: 25px;
+      cursor: pointer;
+      .brand {
+        .brand-imgBox {
+          width: 60px;
+          height: 60px;
+          background-color: #e8e8e9;
+          border-radius: 50%;
+        }
+        p {
+          font-family: "inter";
+          font-size: 16px;
+          font-weight: 600;
+          margin-top: 12px;
+        }
+      }
+    }
+  }
+  &_products {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    .homePage_products-list {
+      &_product {
+        .product-img {
+          width: 130px;
+          height: 130px;
+          max-width: 150px;
+          max-height: 150px;
+          background-color: #f3f3f3;
+          border-radius: 15px;
+          padding: 10px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .product-name {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 19px;
+          line-height: 24px;
+          letter-spacing: -0.04em;
+          padding-left: 5px;
+        }
+        .product-price {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 17px;
+          letter-spacing: -0.04em;
+          padding:0px 5px 10px 0px;
+
+        }
+      }
+    }
+  }
+}

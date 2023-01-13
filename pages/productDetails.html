@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/styles/toastify.min.css" />
+    <link
+      rel="stylesheet"
+      href="../assets/styles/css/productDetails-page.css"
+    />
+    <title>Product Details</title>
+  </head>
+  <body>
+    <div class="productDetails">
+      <div class="productDetails_back" id="icon-back" onclick="goBack()">
+        <iconify-icon
+          icon="material-symbols:arrow-right-alt"
+          width="25"
+          height="25"
+          rotate="180deg"
+        ></iconify-icon>
+      </div>
+      <div class="productDetails_slider">
+        <div class="slideshow-container"></div>
+        <br />
+      </div>
+
+      <div class="productDetails_info">
+        <div class="productDetails_info_name flex row j-sb">
+          <h1 id="productName"></h1>
+          <iconify-icon
+            icon="mdi:cards-heart-outline"
+            width="25"
+            height="25"
+          ></iconify-icon>
+        </div>
+
+        <div class="productDetails_info_desc">
+          <p id="productDesc"></p>
+          <strong id="viewMore" onclick="showFullDesc()">View more ...</strong>
+        </div>
+
+        <div class="flex a-c gap20" style="margin-top: 10px">
+          <div class="productDetails_info_size">
+            <p class="productDetails_info_size_title">Size</p>
+            <div class="productSize flex a-c gap10"></div>
+          </div>
+
+          <div class="productDetails_info_color">
+            <p class="productDetails_info_color_title">Color</p>
+            <div class="productColor flex a-c gap10"></div>
+          </div>
+        </div>
+
+        <div class="productDetails_info_quantity flex  a-c gap30" id="quantityBox">
+          <p>Quantity</p>
+          <div class="productDetails_info_quantity_quantityBox flex row  a-c gap15 ">
+            <iconify-icon icon="ic:baseline-minus" width="25" height="25"  onclick="changeQuantity('-')"></iconify-icon>
+            <p id="quantityNumber">0</p>
+            <iconify-icon icon="ic:baseline-plus" width="25" height="25"  onclick="changeQuantity('+')"></iconify-icon>
+          </div>
+        </div>
+
+        <div class=" productDetails_info_add-to-cart flex row a-c j-sb gap20" id="addToCart">
+          <div class="productDetails_info_add-to-cart_textPrice flex col gap10 a-c">
+            <p>Total Price</p>
+            <p id="totalPrice">$0</p>
+          </div>
+          <button id="addToCart" onclick="addToCart()">Add to cart</button>
+        </div>
+      </div>  
+      </div>
+
+      
+  
+
+    <script src="../assets/script/public/iconify-icon.min.js"></script>
+    <script src="../assets/script/public/axios.min.js"></script>
+    <script src="../assets/script/public/toastify-js.js"></script>
+    <script src="../assets/script/pages/productDetails.js"></script>
+  </body>
+</html>

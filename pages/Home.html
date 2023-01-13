@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="../assets/styles/css/home-page.css" />
+  </head>
+  <body>
+    <div class="homePage">
+      <div class="homePage_header flex row a-c j-sb">
+        <div class="homePage_header_left">
+          <div class="userBox flex row a-c j-sb gap10">
+            <img
+              id="userProfileImage"
+              src="../assets/images/profile/image-user1.png"
+              alt="user Avatar"
+            />
+            <div>
+              <p class="greeting">Good Moring</p>
+              <p id="userProfileName">John Smit</p>
+            </div>
+          </div>
+        </div>
+        <div class="homePage_header_right">
+          <iconify-icon
+            icon="mdi:bell-outline"
+            width="25"
+            height="25"
+            id="homePage_bell"
+          ></iconify-icon>
+          <iconify-icon
+            icon="mdi:cards-heart-outline"
+            width="25"
+            height="25"
+            id="homePage_heart"
+          ></iconify-icon>
+        </div>
+      </div>
+      <div class="homePage_search">
+        <iconify-icon
+          icon="material-symbols:search"
+          class="homePage_search_search-icon"
+          width="23"
+          height="23"
+        ></iconify-icon>
+        <input type="search" id="searchBox" placeholder="Search" />
+      </div>
+      <div class="homePage_category">
+        <div
+          id="brands"
+          class="homePage_category_brandBox flex j-sa a-c f-wrap gap15"
+        ></div>
+      </div>
+
+      <div class="homePage_products">
+        <div
+          id="products"
+          class="homePage_products-list flex j-sa a-c f-wrap gap5"
+        ></div>
+      </div>
+      <div class="menu-bottom">
+        <div class="flex col a-c j-c" onclick="navigatePage('Home.html')">
+          <iconify-icon
+            icon="ion:home-sharp"
+            width="25px"
+            heigth="25px"
+          ></iconify-icon>
+          <p>Home</p>
+        </div>
+        <div class="flex col a-c j-c" onclick="navigatePage('cart.html')">
+          <iconify-icon
+            icon="ic:outline-shopping-bag"
+            width="25px"
+            heigth="25px"
+          ></iconify-icon>
+          <p>Cart</p>
+        </div>
+        <div class="flex col a-c j-c" onclick="navigatePage('orders.html')">
+          <iconify-icon
+            icon="bi:cart"
+            width="25px"
+            heigth="25px"
+          ></iconify-icon>
+          <p>Orders</p>
+        </div>
+        <div class="flex col a-c j-c" onclick="navigatePage('wallet.html')">
+          <iconify-icon
+            icon="ion:wallet-outline"
+            width="25px"
+            heigth="25px"
+          ></iconify-icon>
+          <p>Wallet</p>
+        </div>
+        <div class="flex col a-c j-c" onclick="navigatePage('profile.html')">
+          <iconify-icon
+            icon="mdi-light:account"
+            width="25px"
+            heigth="25px"
+          ></iconify-icon>
+          <p>Profile</p>
+        </div>
+      </div>
+    </div>
+    <script src="../assets/script/public/iconify-icon.min.js"></script>
+    <script src="../assets/script/public/axios.min.js"></script>
+    <script src="../assets/script/pages/home.js"></script>
+    <!-- <script src="../assets/script/public/navigatePage.js" type="module"></script> -->
+  </body>
+</html>

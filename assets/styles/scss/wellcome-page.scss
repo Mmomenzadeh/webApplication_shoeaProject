@@ -1,0 +1,53 @@
+@import "./public.scss";
+
+.wellcomePage {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  &::before {
+    content: "";
+    background-image: url(../../images/splash/wellcome5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    height: 100vh;
+    width: 100%;
+    filter: brightness(0.3);
+  }
+
+  p {
+    position: absolute;
+    left: 20px;
+    color: #fff;
+  }
+
+  p:nth-child(1) {
+    bottom: 250px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  p:nth-child(2) {
+    bottom: 150px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 87px;
+    display: flex;
+    align-items: center;
+  }
+
+  p:nth-child(3) {
+    bottom: 100px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

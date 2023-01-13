@@ -1,0 +1,51 @@
+@import "public.scss";
+
+.splashPage {
+  height: 100vh;
+  overflow: hidden;
+
+  .splashPage_img {
+    width: 100%;
+    img {
+      filter: brightness(0.7);
+      object-fit: cover;
+      height: 65vh;
+      width: 100%;
+    }
+  }
+  p {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 35px;
+    line-height: 35px;
+    text-align: center;
+  }
+  #p-splash3{
+    font-size: 30px;
+  }
+  .step{
+    width: 35px;
+    height: 3px;
+    background-color: #808080;
+    border-radius: 1px;
+  }
+  .stepActive{
+    background-color: #000000;
+  }
+  .splashPage_btn{
+    width: 100%;
+
+    button{
+        width: 380px;
+        height: 47px;
+        background: #212529;
+        border: 1px solid #212529;
+        border-radius: 30px;
+        margin-bottom: 10px;
+        color: #ffffff;
+        font-size: larger;
+        cursor: pointer;
+    }
+  }
+}

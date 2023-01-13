@@ -1,0 +1,348 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.col {
+  flex-direction: column;
+}
+
+.j-c {
+  justify-content: center;
+}
+
+.a-c {
+  align-items: center;
+}
+
+.j-sb {
+  justify-content: space-between;
+}
+
+.j-sa {
+  justify-content: space-around;
+}
+
+.f-wrap {
+  flex-wrap: wrap;
+}
+
+.gap5 {
+  gap: 5px;
+}
+
+.gap10 {
+  gap: 10px;
+}
+
+.gap15 {
+  gap: 15px;
+}
+
+.gap20 {
+  gap: 20px;
+}
+
+.gap25 {
+  gap: 25px;
+}
+
+.gap30 {
+  gap: 30px;
+}
+
+.gap35 {
+  gap: 35px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.menu-bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: #fff;
+  padding: 10px 0px;
+  cursor: pointer;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.menu-bottom p {
+  margin-top: 5px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 12px;
+  letter-spacing: -0.04em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  max-height: 400px;
+  text-align: center;
+}
+.mySlides img {
+  height: 100%;
+  width: 90%;
+  object-fit: cover;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.productDetails {
+  min-height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+.productDetails_back {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+}
+.productDetails_slider {
+  background-color: #f3f3f3;
+  height: 40vh;
+}
+.productDetails_info {
+  padding: 20px;
+}
+.productDetails_info_name h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 39px;
+}
+.productDetails_info_desc {
+  margin-top: 5px;
+}
+.productDetails_info_desc p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: justify;
+  display: inline;
+}
+.productDetails_info_desc strong {
+  font-weight: bolder;
+  font-size: larger;
+}
+.productDetails_info_size_title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 24px;
+  align-items: center;
+}
+.productDetails_info_size .productSize {
+  padding-top: 10px;
+}
+.productDetails_info_size .productSize .size {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  font-weight: bolder;
+  color: gray;
+  font-size: larger;
+}
+.productDetails_info_size .productSize .selectSize {
+  background-color: #000;
+  color: #fff;
+}
+.productDetails_info_color_title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 24px;
+  align-items: center;
+}
+.productDetails_info_color .productColor {
+  padding-top: 10px;
+}
+.productDetails_info_color .productColor .color {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+.productDetails_info_color .productColor .selectColor {
+  border: 4px solid gold;
+}
+.productDetails_info_quantity {
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+.productDetails_info_quantity p {
+  font-size: 20px;
+  font-weight: bolder;
+}
+.productDetails_info_quantity_quantityBox {
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: #efefef;
+}
+.productDetails_info_add-to-cart {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 20px;
+  background-color: #fff;
+}
+.productDetails_info_add-to-cart #addToCart {
+  padding: 12px 16px;
+  align-items: center;
+  width: 100%;
+  height: 47px;
+  color: #fff;
+  background: #000;
+  border: none;
+  border-radius: 30px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.productDetails_info_add-to-cart_textPrice p {
+  width: max-content;
+}
+.productDetails_info_add-to-cart_textPrice p:nth-child(1) {
+  font-family: "Inter";
+  font-style: normal;
+  color: gray;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 24px;
+}
+.productDetails_info_add-to-cart_textPrice p:nth-child(2) {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 25px;
+}
