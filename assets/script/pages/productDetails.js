@@ -176,19 +176,24 @@ const addToCart = () => {
   ).backgroundColor;
   if (cart.length > 0) {
     let tempCart = JSON.parse(localStorage.getItem("cart"));
-    let tempCheck = tempCart.find((item) => item.productId === productId);
+
+    let tempCheck = tempCart.find((item) => {
+     return item.id === productId;
+    });
+    console.log(tempCheck);
     if (tempCheck) {
       tempCart.map((item) => {
-        if (item.productId === productId) {
+        if (item.id === productId) {
           item.id = productId;
           item.size = productSize;
           item.color = productColor;
           item.quantity = buyQuantity;
           item.totalPrice = +productPrice * +buyQuantity;
         }
-        return item;
+        return item
       });
-      localStorage.setItem(JSON.stringify("cart", tempCart));
+      localStorage.setItem("cart", JSON.stringify(tempCart));
+
     } else {
       cart.push({
         id: productId,
