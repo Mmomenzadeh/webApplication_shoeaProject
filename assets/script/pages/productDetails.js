@@ -11,17 +11,15 @@ let productQuantity;
 let buyQuantity = 1;
 let productPrice = 0;
 
-let cart =[];
-
-
+let cart = [];
 
 const getProductDetails = async () => {
   try {
     const request = await axios.get(`${BASE_URL}/products/${productId}`);
     const productData = request.data;
     displayProductDetails(productData);
-    if (localStorage.getItem('cart')) {
-      cart = JSON.parse(localStorage.getItem('cart'))
+    if (localStorage.getItem("cart")) {
+      cart = JSON.parse(localStorage.getItem("cart"));
     }
   } catch (error) {
     console.log(error);
@@ -160,48 +158,59 @@ const changeQuantity = (op) => {
 const setOption = (type, e) => {
   if (type === "size") {
     [...document.querySelectorAll(".size")].map((sizeElement) => {
-      sizeElement.classList.remove('selectSize')
+      sizeElement.classList.remove("selectSize");
     });
-    e.classList.add('selectSize')
-  }else{
-    [...document.querySelectorAll('.color')].map(colorElement =>{
-      colorElement.classList.remove('selectColor')
-    })
-    e.classList.add('selectColor')
+    e.classList.add("selectSize");
+  } else {
+    [...document.querySelectorAll(".color")].map((colorElement) => {
+      colorElement.classList.remove("selectColor");
+    });
+    e.classList.add("selectColor");
   }
 };
 
-const addToCart = ()=>{
- 
-  let productSize = document.querySelector('.selectSize').innerHTML;
-  let productColor =window.getComputedStyle(document.querySelector('.selectColor')).backgroundColor
-  if (cart.length >0) {
-    let temp =JSON.parse( localStorage.getItem('cart'))
-    let tempCheck = temp.find(id =>{id === productId})
+const addToCart = () => {
+  let productSize = document.querySelector(".selectSize").innerHTML;
+  let productColor = window.getComputedStyle(
+    document.querySelector(".selectColor")
+  ).backgroundColor;
+  if (cart.length > 0) {
+    let tempCart = JSON.parse(localStorage.getItem("cart"));
+    let tempCheck = tempCart.find((item) => item.productId === productId);
     if (tempCheck) {
-      temp.map(item =>{
-
-      })
-    }else{
+      tempCart.map((item) => {
+        if (item.productId === productId) {
+          item.id = productId;
+          item.size = productSize;
+          item.color = productColor;
+          item.quantity = buyQuantity;
+          item.totalPrice = +productPrice * +buyQuantity;
+        }
+        return item;
+      });
+      localStorage.setItem(JSON.stringify("cart", tempCart));
+    } else {
       cart.push({
-        id : productId,
-        size : productSize,
-        color : productColor,
-        quantity : buyQuantity,
-        totalPrice : (+productPrice * +buyQuantity)
-      })
-      localStorage.setItem('cart',JSON.stringify(cart))
-
+        id: productId,
+        size: productSize,
+        color: productColor,
+        quantity: buyQuantity,
+        totalPrice: +productPrice * +buyQuantity,
+      });
+      localStorage.setItem("cart", JSON.stringify(cart));
     }
- 
-  }else{
-    localStorage.setItem('cart',JSON.stringify([{
-      id : productId,
-      size : productSize,
-      color : productColor,
-      quantity : buyQuantity,
-      totalPrice : (+productPrice * +buyQuantity)
-    }]))
+  } else {
+    localStorage.setItem(
+      "cart",
+      JSON.stringify([
+        {
+          id: productId,
+          size: productSize,
+          color: productColor,
+          quantity: buyQuantity,
+          totalPrice: +productPrice * +buyQuantity,
+        },
+      ])
+    );
   }
-
-}
+};
