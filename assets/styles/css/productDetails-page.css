@@ -314,7 +314,7 @@ table {
   padding: 20px;
   background-color: #fff;
 }
-.productDetails_info_add-to-cart #addToCart {
+.productDetails_info_add-to-cart #addToCartBtn {
   padding: 12px 16px;
   align-items: center;
   width: 100%;

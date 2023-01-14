@@ -21,6 +21,7 @@ const getProductDetails = async () => {
     if (localStorage.getItem("cart")) {
       cart = JSON.parse(localStorage.getItem("cart"));
     }
+    selectCart();
   } catch (error) {
     console.log(error);
     Toastify({
@@ -93,6 +94,7 @@ const displayProductDetails = (productData) => {
     ).innerHTML += `<div class="color flex j-c a-c" style="background-color: ${color};" onclick="setOption('color',this)"></div>`;
   });
 };
+
 const showSlider = (productImages) => {
   productImages.map((image) => {
     slideshowContainer.innerHTML += `
@@ -176,11 +178,9 @@ const addToCart = () => {
   ).backgroundColor;
   if (cart.length > 0) {
     let tempCart = JSON.parse(localStorage.getItem("cart"));
-
     let tempCheck = tempCart.find((item) => {
-     return item.id === productId;
+      return item.id === productId;
     });
-    console.log(tempCheck);
     if (tempCheck) {
       tempCart.map((item) => {
         if (item.id === productId) {
@@ -193,7 +193,6 @@ const addToCart = () => {
         return item
       });
       localStorage.setItem("cart", JSON.stringify(tempCart));
-
     } else {
       cart.push({
         id: productId,
@@ -217,5 +216,36 @@ const addToCart = () => {
         },
       ])
     );
+    document.getElementById("addToCartBtn").innerText = "Update Cart";
+  }
+};
+
+const selectCart = () => {
+  if (cart.length > 0) {
+    const thisProduct = cart.find((item) => {
+      return item.id === productId;
+    });
+
+    console.log(thisProduct);
+
+    let sizes = document.querySelectorAll(".size");
+    [...sizes].map((item) => {
+      if (item.innerHTML === thisProduct.size) {
+        item.classList.add("selectSize");
+      }
+    });
+
+    let colors = document.querySelectorAll(".color");
+    [...colors].map((item) => {
+      if (window.getComputedStyle(item).backgroundColor === thisProduct.color) {
+        item.classList.add("selectColor");
+      }
+    });
+
+    document.getElementById("quantityNumber").innerHTML = thisProduct.quantity;
+    document.getElementById(
+      "totalPrice"
+    ).innerHTML = `$ ${thisProduct.totalPrice}`;
+    document.getElementById("addToCartBtn").innerText = "Update Cart";
   }
 };
